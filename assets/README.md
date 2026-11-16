@@ -1,29 +1,21 @@
-# Assets
+# Visual assets
 
-Brand and demo assets for the repo. Not loaded by skills at runtime — purely for the README, plugin manifests, and marketplace listings.
+These files are presentation assets. Skills do not load them at runtime.
 
-## Expected files
-
-| File | Used by | Notes |
+| Asset | Purpose | Attribution |
 |---|---|---|
-| `logo.png` | `.cursor-plugin/plugin.json` (`"logo": "assets/logo.png"`) | Cursor plugin display logo. **Add this — manifest currently references a missing file.** |
-| `icon.png` | future plugin manifests, marketplace listings | Square icon, 256×256 or 512×512 |
-| `banner.png` | `README.md` header (optional) | Wide banner image for the GitHub page |
-| `demo-generate.gif` | `README.md` Skills section | Short loop showing `higgsfield-generate` end-to-end |
-| `demo-soul.gif` | `README.md` | Short loop showing Soul training |
-| `demo-product-photoshoot.gif` | `README.md` | Short loop showing a Pinterest-pin or hero-banner result |
+| `logo.png` | Higgsfield wordmark shown at the top of the repository README. | Original upstream asset; preserved from Higgsfield AI. |
+| `icon.svg` | Higgsfield icon retained from the upstream repository. | Original upstream asset; preserved from Higgsfield AI. |
+| `creative-forge-banner.svg` | Custom overview graphic used in the repository README. | Created for this repository; not an official Higgsfield AI brand asset. |
 
-## Conventions
+<p align="center">
+  <img src="logo.png" alt="Higgsfield wordmark" width="360">
+</p>
 
-- **Logos and icons** — PNG with transparency, square aspect for icons.
-- **Demo GIFs** — under 2 MB each, 8–15 seconds, looped.
-- **Banner** — 1280×320 or 1920×480 typical GitHub social-preview ratio.
+<img src="creative-forge-banner.svg" alt="Creative Forge overview graphic" width="100%">
 
-## Brand sources
+## Future additions
 
-Pull from internal Higgsfield brand assets (Figma / brand kit) when adding here. Don't recreate from scratch.
+Product screenshots or short demos can make the README more useful. Only add media that shows real, verified output from the corresponding workflow; avoid mock screenshots that could be mistaken for generated results.
 
-## Known gaps
-
-- `logo.png` missing — `.cursor-plugin/plugin.json` references it (line: `"logo": "assets/logo.png"`). Cursor will render a default placeholder until added.
-- No demo GIFs in README yet.
+Keep demo GIFs optimized (under 2 MB where practical), looped, and focused on one workflow. Preserve attribution when reusing any upstream asset.

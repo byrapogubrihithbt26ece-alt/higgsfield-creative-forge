@@ -1,18 +1,21 @@
-# Contributing to Higgsfield Skills
+# Contributing to Creative Forge
 
-Thanks for considering a contribution. This repo follows the [Agent Skills specification](https://agentskills.io/specification.md) — every skill is one folder with a `SKILL.md` plus optional `references/` for on-demand details.
+Thanks for helping make Creative Forge more useful. This is an independent, personal copy of [Higgsfield AI's skills project](https://github.com/higgsfield-ai/skills); pull requests here should target this repository, not the upstream project. Please preserve original author credit and follow the [Agent Skills specification](https://agentskills.io/specification.md): each skill is a folder with a `SKILL.md` and optional `references/` for on-demand details.
 
 ## Git workflow
 
-All changes go through pull requests. No direct pushes to `main`.
+Issues are welcome for bugs, ideas, and proposed skills. For code or documentation changes, fork this repository, work on a focused branch, and open a pull request back to Creative Forge. No direct pushes to `main`.
 
 ```bash
-# 1. Create a branch from main
-git checkout main && git pull
+# 1. Fork the repository on GitHub, then clone your fork
+git clone https://github.com/<your-username>/higgsfield-creative-forge.git
+cd higgsfield-creative-forge
+
+# 2. Create a focused branch
 git checkout -b <type>/<short-description>
 # e.g. feat/marketing-studio-presets, fix/soul-timeout, refactor/product-photoshoot
 
-# 2. Make changes, commit with clear messages
+# 3. Make changes and commit with a clear message
 git add -A
 git commit -m "<type>: short summary of what changed
 
@@ -20,10 +23,12 @@ git commit -m "<type>: short summary of what changed
 - Reference any test runs or eval results
 - Note any breaking changes to the skill interface"
 
-# 3. Push and open a PR
+# 4. Push your branch and open a PR targeting Creative Forge
 git push -u origin <branch-name>
-gh pr create
+gh pr create --repo pb71426-ctrl/higgsfield-creative-forge --base main
 ```
+
+If you already have write access to this repository, you can create your branch here instead of forking.
 
 ### Branch naming
 
@@ -97,7 +102,7 @@ allowed-tools: Bash
 Then:
 
 1. Add the folder to the `skills` array in `.claude-plugin/marketplace.json`.
-2. Update `README.md` with a row in the Skills table and Quick Reference.
+2. Update `README.md` with a row in the "What is inside" table.
 3. Add an `INSTALL.md` mention if the skill needs extra setup.
 4. Open a `feat/` PR.
 

@@ -1,4 +1,6 @@
-# Install Higgsfield Skills
+# Install Creative Forge Skills
+
+Creative Forge packages nine focused skills for AI agents. Install the set that fits your workflow; the [README](./README.md) includes an overview of each skill.
 
 These skills ship in this repo:
 
@@ -32,39 +34,39 @@ higgsfield auth login
 Works with Claude Code, Cursor, Codex, and any agent that picks up `~/.<agent>/skills/<name>/SKILL.md`. Requires Node.js.
 
 ```bash
-npx skills add higgsfield-ai/skills
+npx skills add pb71426-ctrl/higgsfield-creative-forge
 ```
 
-Installs all eight skills. The `skills` CLI auto-detects the host agent and writes each skill to the right path.
+Installs all nine skills. The `skills` CLI auto-detects the host agent and writes each skill to the right path.
 
 ## Option 2 — `gh skill install`
 
 GitHub CLI v2.90+ extension. Same coverage as `npx skills`.
 
 ```bash
-gh skill install higgsfield-ai/skills
+gh skill install pb71426-ctrl/higgsfield-creative-forge
 ```
 
-Installs all eight skills.
+Installs all nine skills.
 
 ## Option 3 — Claude Code marketplace
 
 Claude Code only. Inside Claude Code:
 
 ```
-/plugin marketplace add higgsfield-ai/skills
+/plugin marketplace add pb71426-ctrl/higgsfield-creative-forge
 /plugin install higgsfield@higgsfield
 ```
 
-Pulls the plugin manifest from `.claude-plugin/marketplace.json` and registers all eight skills, including `/higgsfield:higgsfield-brandkit`, `/higgsfield:higgsfield-youtube-thumbnail`, and `/higgsfield:higgsfield-websites`.
+Pulls the plugin manifest from `.claude-plugin/marketplace.json` and registers all nine skills, including `/higgsfield:higgsfield-brandkit`, `/higgsfield:higgsfield-youtube-thumbnail`, and `/higgsfield:higgsfield-websites`.
 
 ## Option 4 — Setup script
 
 Universal fallback. Clones the repo locally and symlinks each skill into the agent's expected directory.
 
 ```bash
-git clone --depth 1 https://github.com/higgsfield-ai/skills.git
-cd skills
+git clone --depth 1 https://github.com/pb71426-ctrl/higgsfield-creative-forge.git
+cd higgsfield-creative-forge
 ./setup
 ```
 
@@ -83,8 +85,8 @@ The agent should invoke `higgsfield-generate`, run `higgsfield generate create z
 | Method | Update command |
 |---|---|
 | `npx skills` | re-run the `npx skills add ...` commands |
-| `gh skill install` | `gh skill update higgsfield-ai/skills` |
+| `gh skill install` | `gh skill update pb71426-ctrl/higgsfield-creative-forge` |
 | Claude Code marketplace | `/plugin update higgsfield@higgsfield` |
-| Setup script | `cd skills && git pull && ./setup` |
+| Setup script | `cd higgsfield-creative-forge && git pull && ./setup` |
 
 For a custom skills directory, run `./setup --host codex --target-dir <directory>`. The default Codex destination is `~/.agents/skills`.

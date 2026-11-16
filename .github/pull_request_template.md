@@ -1,3 +1,5 @@
+Thanks for contributing to Creative Forge. Please keep upstream attribution intact and target this repository rather than Higgsfield AI's original project.
+
 ## What
 
 <!-- One paragraph: what this PR does. -->

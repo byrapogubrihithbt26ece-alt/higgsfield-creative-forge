@@ -15,8 +15,13 @@ assignees: ""
 - [ ] `higgsfield-generate`
 - [ ] `higgsfield-soul-id`
 - [ ] `higgsfield-product-photoshoot`
-- [ ] Marketplace / install / plugin manifest
-- [ ] CI / repo hygiene
+- [ ] `higgsfield-brandkit`
+- [ ] `higgsfield-marketplace-cards`
+- [ ] `higgsfield-websites`
+- [ ] `higgsfield-faceless-video`
+- [ ] `higgsfield-video-explainer`
+- [ ] `higgsfield-youtube-thumbnail`
+- [ ] Install / plugin / repository
 - [ ] Other:
 
 ## Reproduction steps

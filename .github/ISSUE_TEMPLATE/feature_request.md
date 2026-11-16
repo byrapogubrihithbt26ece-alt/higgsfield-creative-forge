@@ -11,6 +11,12 @@ assignees: ""
 - [ ] `higgsfield-generate`
 - [ ] `higgsfield-soul-id`
 - [ ] `higgsfield-product-photoshoot`
+- [ ] `higgsfield-brandkit`
+- [ ] `higgsfield-marketplace-cards`
+- [ ] `higgsfield-websites`
+- [ ] `higgsfield-faceless-video`
+- [ ] `higgsfield-video-explainer`
+- [ ] `higgsfield-youtube-thumbnail`
 - [ ] Repo-level (CI, docs, install, distribution)
 
 ## What would change

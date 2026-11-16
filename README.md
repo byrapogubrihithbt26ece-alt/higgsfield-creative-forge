@@ -1,117 +1,105 @@
-# Higgsfield AI Skills
+<p align="center">
+  <img src="assets/logo.png" alt="Higgsfield" width="360">
+</p>
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![Version](https://img.shields.io/badge/version-0.14.0-green.svg)](./VERSION)
-[![Skills](https://img.shields.io/badge/skills-9-blueviolet.svg)](#skills)
-[![Discord](https://img.shields.io/badge/discord-join-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/higgsfield)
+<h1 align="center">Creative Forge</h1>
 
-AI agent skills for image/video generation and complete visual brand systems via [Higgsfield AI](https://higgsfield.ai), including Marketing Studio and Virality Predictor video scoring. Works with Claude Code, Cursor, Codex, and other AI coding agents that load Markdown-based skills.
+<p align="center">
+  A creative toolkit for turning ideas into images, video, 3D assets, brand systems, and web experiences.
+  <br>
+  Powered by reusable agent skills and the <a href="https://github.com/higgsfield-ai/cli">Higgsfield CLI</a>.
+</p>
 
-## Install
+<p align="center">
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-6f7cff?style=flat-square" alt="MIT License"></a>
+  <img src="https://img.shields.io/badge/version-0.14.0-8bdc65?style=flat-square" alt="Version 0.14.0">
+  <a href="#what-is-inside"><img src="https://img.shields.io/badge/agent%20skills-9-9b67f5?style=flat-square" alt="9 agent skills"></a>
+</p>
 
-Pick one. Each method handles the Higgsfield CLI install and auth as part of skill setup.
+<p align="center">
+  <img src="assets/creative-forge-banner.svg" alt="Creative Forge overview: image, video, 3D, and web workflows" width="100%">
+</p>
 
-### `npx skills` — recommended, cross-agent
+> **A personal project by [@pb71426-ctrl](https://github.com/pb71426-ctrl).** Creative Forge is inspired by and adapted from [Higgsfield AI's original open-source skills repository](https://github.com/higgsfield-ai/skills). This edition adds its own presentation, field guides, artwork, and community contribution path while keeping the upstream skill workflows and assets credited to their authors under the original MIT license. It is an independent project, not an official Higgsfield AI release.
+
+## What is inside
+
+| Skill | Use it for |
+|---|---|
+| [**Generate**](./higgsfield-generate) | Create images, video, 3D and audio, plus branded ads and video analysis. |
+| [**Soul ID**](./higgsfield-soul-id) | Train a reusable character identity for consistent image and video generation. |
+| [**Product Photoshoot**](./higgsfield-product-photoshoot) | Make polished product imagery, lifestyle scenes, campaign visuals and virtual try-ons. |
+| [**Brandkit**](./higgsfield-brandkit) | Build or extend a complete visual identity, from logo and typography to brandbooks. |
+| [**Marketplace Cards**](./higgsfield-marketplace-cards) | Create marketplace-ready primary, secondary and A+ product content. |
+| [**Websites**](./higgsfield-websites) | Build, refine and deploy websites, web apps and browser games. |
+| [**Faceless Video**](./higgsfield-faceless-video) | Produce narrated explainers, documentaries, stories and music videos. |
+| [**Video Explainer**](./higgsfield-video-explainer) | Compatibility entry for the faceless-video workflow. |
+| [**YouTube Thumbnail**](./higgsfield-youtube-thumbnail) | Design truthful, high-impact thumbnails and vertical video covers. |
+
+Skills work with Claude Code, Cursor, Codex and other agents that support Markdown-based skills. Each skill folder includes its own usage guidance and references.
+
+## A simple creative flow
+
+```mermaid
+flowchart LR
+    A[Your brief] --> B[Choose a skill]
+    B --> C[Higgsfield CLI]
+    C --> D[Images and video]
+    C --> E[3D and audio]
+    C --> F[Brand systems and web experiences]
+    G[Optional: train a Soul identity] --> B
+```
+
+Train a Soul identity when you need a consistent person or character, then pass its reference into generation. Use Brandkit for a coordinated identity, or Websites to turn creative assets into a working web experience.
+
+## Get started
+
+The skills use the Higgsfield CLI for authentication, generation, and results.
+
+### Install with `npx skills`
 
 ```bash
-npx skills add higgsfield-ai/skills
+npx skills add pb71426-ctrl/higgsfield-creative-forge
 ```
 
-### `gh skill install`
+### Install with GitHub CLI
 
-GitHub CLI v2.90+:
+Requires GitHub CLI 2.90 or later:
 
 ```bash
-gh skill install higgsfield-ai/skills
+gh skill install pb71426-ctrl/higgsfield-creative-forge
 ```
 
-### Claude Code marketplace
+### Install the Claude Code plugin
 
-Inside Claude Code:
-
-```
-/plugin marketplace add higgsfield-ai/skills
+```text
+/plugin marketplace add pb71426-ctrl/higgsfield-creative-forge
 /plugin install higgsfield@higgsfield
 ```
 
-### Setup script
-
-Universal fallback:
+### Run the setup script
 
 ```bash
-git clone --depth 1 https://github.com/higgsfield-ai/skills.git
-cd skills
+git clone --depth 1 https://github.com/pb71426-ctrl/higgsfield-creative-forge.git
+cd higgsfield-creative-forge
 ./setup
 ```
 
-More options in [INSTALL.md](./INSTALL.md). Agent-driven install (paste into your agent): [INSTALL_FOR_AGENTS.md](./INSTALL_FOR_AGENTS.md).
+See [INSTALL.md](./INSTALL.md) for all installation options and [INSTALL_FOR_AGENTS.md](./INSTALL_FOR_AGENTS.md) for the agent-driven runbook.
 
-## Skills
+## Built for creative work
 
-| Skill | Invoke (Claude Code) | Description |
-|---|---|---|
-| [`higgsfield-generate`](./higgsfield-generate) | `/higgsfield:higgsfield-generate` | Image, video, 3D, and audio generation across 30+ models (Nano Banana 2, Soul V2, Veo 3.1, Kling 3.0, Seedance 2.5, Seed Audio 1.0, Flux 2, GPT Image 2.6 with native GIF/SVG, …), plus Marketing Studio for branded ads with avatars/products/hooks/settings and Virality Predictor scoring for finished videos. |
-| [`higgsfield-soul-id`](./higgsfield-soul-id) | `/higgsfield:higgsfield-soul-id` | Train a Soul Character — a reusable, face-faithful identity model. Returns a `reference_id` consumable by Soul-aware generation. |
-| [`higgsfield-product-photoshoot`](./higgsfield-product-photoshoot) | `/higgsfield:higgsfield-product-photoshoot` | Brand-quality product imagery with mode-specific prompt enhancement. 10 modes (studio, lifestyle, Pinterest, hero banner, ad packs, virtual try-on, …) backed by `gpt_image_2`. |
-| [`higgsfield-brandkit`](./higgsfield-brandkit) | `/higgsfield:higgsfield-brandkit` | Create or extend a complete visual identity: palettes, editable SVG logo marks, typography, mockups, social graphics, packaging, signage, merchandise, decks, and canonical PPTX/PDF brandbooks. |
-| [`higgsfield-marketplace-cards`](./higgsfield-marketplace-cards) | `/higgsfield:higgsfield-marketplace-cards` | Marketplace product cards: compliant main image, secondary product images, and A+ style modules via backend prompt enhancement. |
-| [`higgsfield-websites`](./higgsfield-websites) | `/higgsfield:higgsfield-websites` | Build, edit, and deploy full-stack websites — React 19 + TanStack Start, server-rendered as one Cloudflare Worker with D1 / R2 / KV / Durable Objects / Containers. Create → get git repo access → edit locally → push → deploy preview/production, all via `higgsfield website …`. |
-| [`higgsfield-faceless-video`](./higgsfield-faceless-video) | `/higgsfield:higgsfield-faceless-video` | Create faceless explainers, stories, documentaries, and children's music videos. |
-| [`higgsfield-video-explainer`](./higgsfield-video-explainer) | `/higgsfield:higgsfield-video-explainer` | Compatibility entry for faceless explainers. |
-| [`higgsfield-youtube-thumbnail`](./higgsfield-youtube-thumbnail) | `/higgsfield:higgsfield-youtube-thumbnail` | Create truthful, high-impact YouTube thumbnails and vertical video covers with identity-preserving references, controlled variants, focused edits, and optional text-overlay guidance. |
+- **Move from idea to output:** pick a focused skill instead of assembling every workflow from scratch.
+- **Keep identity consistent:** train a Soul Character once and reuse it across supported generations.
+- **Make a full visual system:** carry an approved identity across graphics, packaging, presentations and more.
+- **Go beyond a single asset:** build sites and games that bring generated media into a complete experience.
 
-The skills chain: train Soul → use the reference id in `generate` (including Marketing Studio jobs). `brandkit` chains Recraft, Seedream, GPT Image, and deterministic local tooling into one approval-aware identity system. `product-photoshoot` and `marketplace-cards` are self-contained — backend enhances prompts before submitting image jobs. `youtube-thumbnail` can follow any video workflow once its truthful topic and visual direction are known. `websites` chains with `generate` to embed bespoke hero images, video loops, and OG assets in the site.
+## Help shape Creative Forge
 
-### Modes
+Found a rough edge or have an idea? Start with the [issue tracker](https://github.com/pb71426-ctrl/higgsfield-creative-forge/issues). Use the [bug report](./.github/ISSUE_TEMPLATE/bug_report.md), [feature request](./.github/ISSUE_TEMPLATE/feature_request.md), or [new skill proposal](./.github/ISSUE_TEMPLATE/new_skill_request.md) template so the right details are easy to share.
 
-**`higgsfield-product-photoshoot`** — 10 modes for brand visuals:
+Ready to improve something? Read the [contribution guide](./CONTRIBUTING.md), then send a [pull request](./.github/pull_request_template.md) to this repository. Small, focused changes are easiest to review; please keep upstream credit intact and include the checks you ran.
 
-| Mode | What it's for |
-|---|---|
-| `product_shot` | Product on neutral / studio / catalog background |
-| `lifestyle_scene` | Product in a real environment — hands, action, atmosphere |
-| `closeup_product_with_person` | Tight crop with hands or partial face — beauty, demonstrating |
-| `moodboard_pin` | Vertical 2:3 Pinterest-native pin, moodboard feel |
-| `hero_banner` | Wide-format website / email / campaign header |
-| `social_carousel` | 3–10 connected slides for IG / LinkedIn / Facebook |
-| `ad_creative_pack` | Coordinated pack of static ad variants for Meta / TikTok / Pinterest / Google |
-| `virtual_model_tryout` | Product worn or used by an AI-rendered model |
-| `conceptual_product` | Surreal / CGI-style / levitating / splash / sculptural product |
-| `restyle` | Transform an existing image's aesthetic, mood, or seasonal context |
+## License and attribution
 
-**`higgsfield-generate` Marketing Studio** — 9 modes for branded ad video:
-
-| Mode | What it's for |
-|---|---|
-| `ugc` | Default. Casual, organic-feel content from a presenter |
-| `ugc_how_to` | Tutorial / explainer |
-| `ugc_unboxing` | Unboxing reveal |
-| `product_showcase` | Clean product highlight, polished |
-| `product_review` | Presenter giving an opinion |
-| `tv_spot` | Broadcast-style commercial |
-| `wild_card` | Experimental, model picks the vibe |
-| `ugc_virtual_try_on` | Trying on clothing — UGC vibe |
-| `virtual_try_on` | Trying on clothing — polished, model-driven |
-
-## Quick Reference
-
-| What you want | Skill | Note |
-|---|---|---|
-| Generate any image / video from a prompt | `higgsfield-generate` | Prefers `gpt_image_2_6` / `nano_banana_flash` for images and SOTA `seedance_2_5` for video by default |
-| Generate audio from a prompt | `higgsfield-generate` | Prefers `seed_audio` by default |
-| Image with my own face | `higgsfield-soul-id` then `higgsfield-generate` | One-time training, then `--soul-id` |
-| Branded product photo (studio / lifestyle / Pinterest / hero / ad pack) | `higgsfield-product-photoshoot` | Mode-specific prompt enhancer + `gpt_image_2` |
-| Create or extend a logo, visual identity, brand asset system, or Brandbook | `higgsfield-brandkit` | Recraft SVG marks + approved palette/type + local editable exports and dependency-aware revisions |
-| Marketplace product cards / A+ style content | `higgsfield-marketplace-cards` | Main image, secondary images, and A+ style modules with hidden marketplace prompt templates |
-| Branded ad video / UGC / unboxing / TV spot | `higgsfield-generate` | Marketing Studio mode with avatars + products + optional hooks/settings |
-| Analyze a video's hook / attention / virality potential | `higgsfield-generate` | Uses Virality Predictor (`brain_activity`) with `--video`; returns score metrics plus an Open report link |
-| Train a custom face identity | `higgsfield-soul-id` | 5–20 photos, returns `reference_id` |
-| Image-to-video animation | `higgsfield-generate` | Prefer `seedance_2_5` with `--mode omni_reference --start-image`; `kling3_0_turbo` when the user asks for cheaper |
-| Build / edit / deploy a website, web app, landing page, or dashboard | `higgsfield-websites` | Full-stack React 19 + TanStack Start on Cloudflare; `higgsfield website create/repo-access/deploy` |
-| Create a narrated explainer from a topic or document | `higgsfield-faceless-video` | Generates scenes and narration, then assembles a finished video locally |
-| Create a YouTube thumbnail or Shorts/Instagram video cover | `higgsfield-youtube-thumbnail` | Nano Banana Pro 4K main render, optional face/logo references, controlled variants, and Seedream tweaks |
-| Build and deploy a playable browser game | `higgsfield-websites` | `--type game`: game design, assets, implementation, QA, deploy, and optional publish |
-
-## License
-
-MIT — see [LICENSE](./LICENSE).
+This copy retains the original [MIT License](./LICENSE). Higgsfield AI and the upstream contributors retain attribution for their work. For the canonical project and latest official updates, visit [higgsfield-ai/skills](https://github.com/higgsfield-ai/skills).
