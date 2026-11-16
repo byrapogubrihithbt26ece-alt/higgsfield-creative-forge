@@ -20,7 +20,7 @@
   <img src="assets/creative-forge-banner.svg" alt="Creative Forge overview: image, video, 3D, and web workflows" width="100%">
 </p>
 
-> **A personal project by [@pb71426-ctrl](https://github.com/pb71426-ctrl).** Creative Forge is inspired by and adapted from [Higgsfield AI's original open-source skills repository](https://github.com/higgsfield-ai/skills). This edition adds its own presentation, field guides, artwork, and community contribution path while keeping the upstream skill workflows and assets credited to their authors under the original MIT license. It is an independent project, not an official Higgsfield AI release.
+> **A personal project by [@byrapogubrihithbt26ece-alt](https://github.com/byrapogubrihithbt26ece-alt).** Creative Forge is inspired by and adapted from [Higgsfield AI's original open-source skills repository](https://github.com/higgsfield-ai/skills). This edition adds its own presentation, field guides, artwork, and community contribution path while keeping the upstream skill workflows and assets credited to their authors under the original MIT license. It is an independent project, not an official Higgsfield AI release.
 
 ## What is inside
 
@@ -59,7 +59,7 @@ The skills use the Higgsfield CLI for authentication, generation, and results.
 ### Install with `npx skills`
 
 ```bash
-npx skills add pb71426-ctrl/higgsfield-creative-forge
+npx skills add byrapogubrihithbt26ece-alt/higgsfield-creative-forge
 ```
 
 ### Install with GitHub CLI
@@ -67,20 +67,20 @@ npx skills add pb71426-ctrl/higgsfield-creative-forge
 Requires GitHub CLI 2.90 or later:
 
 ```bash
-gh skill install pb71426-ctrl/higgsfield-creative-forge
+gh skill install byrapogubrihithbt26ece-alt/higgsfield-creative-forge
 ```
 
 ### Install the Claude Code plugin
 
 ```text
-/plugin marketplace add pb71426-ctrl/higgsfield-creative-forge
+/plugin marketplace add byrapogubrihithbt26ece-alt/higgsfield-creative-forge
 /plugin install higgsfield@higgsfield
 ```
 
 ### Run the setup script
 
 ```bash
-git clone --depth 1 https://github.com/pb71426-ctrl/higgsfield-creative-forge.git
+git clone --depth 1 https://github.com/byrapogubrihithbt26ece-alt/higgsfield-creative-forge.git
 cd higgsfield-creative-forge
 ./setup
 ```
@@ -96,7 +96,7 @@ See [INSTALL.md](./INSTALL.md) for all installation options and [INSTALL_FOR_AGE
 
 ## Help shape Creative Forge
 
-Found a rough edge or have an idea? Start with the [issue tracker](https://github.com/pb71426-ctrl/higgsfield-creative-forge/issues). Use the [bug report](./.github/ISSUE_TEMPLATE/bug_report.md), [feature request](./.github/ISSUE_TEMPLATE/feature_request.md), or [new skill proposal](./.github/ISSUE_TEMPLATE/new_skill_request.md) template so the right details are easy to share.
+Found a rough edge or have an idea? Start with the [issue tracker](https://github.com/byrapogubrihithbt26ece-alt/higgsfield-creative-forge/issues). Use the [bug report](./.github/ISSUE_TEMPLATE/bug_report.md), [feature request](./.github/ISSUE_TEMPLATE/feature_request.md), or [new skill proposal](./.github/ISSUE_TEMPLATE/new_skill_request.md) template so the right details are easy to share.
 
 Ready to improve something? Read the [contribution guide](./CONTRIBUTING.md), then send a [pull request](./.github/pull_request_template.md) to this repository. Small, focused changes are easiest to review; please keep upstream credit intact and include the checks you ran.
 

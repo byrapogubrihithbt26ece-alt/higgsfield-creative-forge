@@ -25,7 +25,7 @@ git commit -m "<type>: short summary of what changed
 
 # 4. Push your branch and open a PR targeting Creative Forge
 git push -u origin <branch-name>
-gh pr create --repo pb71426-ctrl/higgsfield-creative-forge --base main
+gh pr create --repo byrapogubrihithbt26ece-alt/higgsfield-creative-forge --base main
 ```
 
 If you already have write access to this repository, you can create your branch here instead of forking.

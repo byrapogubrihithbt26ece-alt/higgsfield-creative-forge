@@ -34,7 +34,7 @@ higgsfield auth login
 Works with Claude Code, Cursor, Codex, and any agent that picks up `~/.<agent>/skills/<name>/SKILL.md`. Requires Node.js.
 
 ```bash
-npx skills add pb71426-ctrl/higgsfield-creative-forge
+npx skills add byrapogubrihithbt26ece-alt/higgsfield-creative-forge
 ```
 
 Installs all nine skills. The `skills` CLI auto-detects the host agent and writes each skill to the right path.
@@ -44,7 +44,7 @@ Installs all nine skills. The `skills` CLI auto-detects the host agent and write
 GitHub CLI v2.90+ extension. Same coverage as `npx skills`.
 
 ```bash
-gh skill install pb71426-ctrl/higgsfield-creative-forge
+gh skill install byrapogubrihithbt26ece-alt/higgsfield-creative-forge
 ```
 
 Installs all nine skills.
@@ -54,7 +54,7 @@ Installs all nine skills.
 Claude Code only. Inside Claude Code:
 
 ```
-/plugin marketplace add pb71426-ctrl/higgsfield-creative-forge
+/plugin marketplace add byrapogubrihithbt26ece-alt/higgsfield-creative-forge
 /plugin install higgsfield@higgsfield
 ```
 
@@ -65,7 +65,7 @@ Pulls the plugin manifest from `.claude-plugin/marketplace.json` and registers a
 Universal fallback. Clones the repo locally and symlinks each skill into the agent's expected directory.
 
 ```bash
-git clone --depth 1 https://github.com/pb71426-ctrl/higgsfield-creative-forge.git
+git clone --depth 1 https://github.com/byrapogubrihithbt26ece-alt/higgsfield-creative-forge.git
 cd higgsfield-creative-forge
 ./setup
 ```
@@ -85,7 +85,7 @@ The agent should invoke `higgsfield-generate`, run `higgsfield generate create z
 | Method | Update command |
 |---|---|
 | `npx skills` | re-run the `npx skills add ...` commands |
-| `gh skill install` | `gh skill update pb71426-ctrl/higgsfield-creative-forge` |
+| `gh skill install` | `gh skill update byrapogubrihithbt26ece-alt/higgsfield-creative-forge` |
 | Claude Code marketplace | `/plugin update higgsfield@higgsfield` |
 | Setup script | `cd higgsfield-creative-forge && git pull && ./setup` |
 

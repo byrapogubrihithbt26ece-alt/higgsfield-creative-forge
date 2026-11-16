@@ -1,6 +1,6 @@
 # Install Creative Forge for Agents
 
-You are an AI coding agent. The user asked you to install Creative Forge skills from `pb71426-ctrl/higgsfield-creative-forge`. Follow this exactly. This is an independently maintained copy of the skills originally published by Higgsfield AI.
+You are an AI coding agent. The user asked you to install Creative Forge skills from `byrapogubrihithbt26ece-alt/higgsfield-creative-forge`. Follow this exactly. This is an independently maintained copy of the skills originally published by Higgsfield AI.
 
 ## Step 1 — Install Higgsfield CLI
 
@@ -33,7 +33,7 @@ Verify: `higgsfield account status`. Expect `<email> — <plan> plan, <N> credit
 **Claude Code** — install the plugin, then ask the user to restart Claude Code:
 
 ```bash
-claude plugin marketplace add pb71426-ctrl/higgsfield-creative-forge
+claude plugin marketplace add byrapogubrihithbt26ece-alt/higgsfield-creative-forge
 claude plugin install higgsfield@higgsfield
 ```
 
@@ -50,7 +50,7 @@ If the plugin install is unavailable, clone the repo anywhere and run `./setup -
 Clone:
 
 ```bash
-git clone https://github.com/pb71426-ctrl/higgsfield-creative-forge.git <path>
+git clone https://github.com/byrapogubrihithbt26ece-alt/higgsfield-creative-forge.git <path>
 ```
 
 ## Step 4 — Verify
